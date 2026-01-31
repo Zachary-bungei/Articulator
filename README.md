@@ -23,20 +23,20 @@ It uses percentage-based geometry to ensure your icons look sharp at any size or
 **Zachary Bungei** is an upcoming visual designer and developer from Kenya.  
 His niche is anchored in the power of design to influence and manipulate mind and behavior.  
 
-Connect with Zachary:
+## Connect with Zachary:
 
 - [GitHub](https://github.com/Zachary-bungei)  
 - [Twitter](https://twitter.com/ZacharyBungei)  
 - [LinkedIn](https://www.linkedin.com/in/zachary-bungei/)  
 - [Portfolio](https://yourportfolio.com) 
 
-Other projects:
+## Other Projects
 
 - [Filmseller](https://filmseller.netlify.app)  
 - [cryptochat](https://cryptochat-31cc.onrender.com)  
-- [ImgEditor](zaxlyimgeditor.netlify.app)  
+- [ImgEditor](https://zaxlyimgeditor.netlify.app)
 
-
+  
 ---
 
 
