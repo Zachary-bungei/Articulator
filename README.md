@@ -16,6 +16,38 @@ It uses percentage-based geometry to ensure your icons look sharp at any size or
 - Designed for **custom elements** usage (`<articulator-icon>`).
 
 ---
+
+
+## About the programmer
+
+**Zachary Bungei** is an upcoming visual designer and developer from Kenya.  
+His niche is anchored in the power of design to influence and manipulate mind and behavior.  
+
+Connect with Zachary:
+
+- [GitHub](https://github.com/Zachary-bungei)  
+- [Twitter](https://twitter.com/ZacharyBungei)  
+- [LinkedIn](https://www.linkedin.com/in/zachary-bungei/)  
+- [Portfolio](https://yourportfolio.com) 
+
+Other projects:
+
+- [Filmseller](https://filmseller.netlify.app)  
+- [cryptochat](https://cryptochat-31cc.onrender.com)  
+- [ImgEditor](zaxlyimgeditor.netlify.app)  
+
+
+---
+
+
+## Features
+
+- Fully **scalable vector icons** using SVG.
+- Supports **lines and shapes** for icons.
+- Supported by all modern broswers
+
+---
+  
 ## Example Usage
 
 Render an icon using the `<articulator-icon>` custom element:
@@ -31,11 +63,11 @@ Render an icon using the `<articulator-icon>` custom element:
 
 ## Installation
 
-Include via **jsDelivr** CDN:
 
+Get via jsDelivr CDN:
 
 <!-- Latest version -->
 <script src="https://cdn.jsdelivr.net/gh/Zachary-bungei/Articulator@main/Articulator.js"></script>
 
 <!-- Or a specific version -->
-<p> Coming soon</p>
+<p> Not supported</p>
