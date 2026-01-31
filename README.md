@@ -35,7 +35,7 @@ Include via **jsDelivr** CDN:
 
 ```html
 <!-- Latest version -->
-<script src="https://cdn.jsdelivr.net/gh/Zachary-bungei/articulator/articulator.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Zachary-bungei/Articulator@main/Articulator.js"></script>
 
 <!-- Or a specific version -->
-<script src="https://cdn.jsdelivr.net/gh/Zachary-bungei/articulator/articulator.js"></script>
+<p> Coming soon</p>
