@@ -10,20 +10,22 @@ It uses percentage-based geometry to ensure your icons look sharp at any size or
 ## Features
 
 - Fully **scalable vector icons** using SVG.
-- Supports **lines and shapes**: ``` menu, user, home, search, settings, plus,
-- minus, check, close, arrowright, arrowleft, arrowup, arrowdown, bell, heart, lock, unlock, trash,
-- download, upload, bookmark, play, pause, filter, list, wifi, pin, compass, laptop, tag, battery, batteryLow ```
+- Supports **lines and shapes**: menu, user, home, search, settings, plus, minus, check, close, arrowright, arrowleft, arrowup, arrowdown, bell, heart, lock, unlock, trash, download, upload, bookmark, play, pause, filter, list, wifi, pin, compass, laptop, tag, battery, batteryLow
 - **Lightweight** and **self-contained**, svg dependencies only.
 - Handles **stroke weight**(light and bold), and **colors**.  // solid is coming soon, colors re in terms of name only
 - Designed for **custom elements** usage (`<articulator-icon>`).
 
 ---
-example
+## Example Usage
+
+Render an icon using the `<articulator-icon>` custom element:
+
+```html
 <articulator-icon
-    name="user" 
-    IconWeight="bold" 
+    name="user"
+    IconWeight="bold"
     size="2rem"
-    color="green";
+    color="green"
     class="Articulator-Icons">
 </articulator-icon>
 
@@ -33,7 +35,7 @@ Include via **jsDelivr** CDN:
 
 ```html
 <!-- Latest version -->
-<script src="https://cdn.jsdelivr.net/gh/<username>/<repo>@latest/articulator.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Zachary-bungei/articulator/articulator.js"></script>
 
 <!-- Or a specific version -->
-<script src="https://cdn.jsdelivr.net/gh/<username>/<repo>@v1.0.0/articulator.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Zachary-bungei/articulator/articulator.js"></script>
