@@ -3137,7 +3137,6 @@
     // center = cn
     //   ]
       
-    // alert(ArticulatorLibrary.size);
     customElements.define("articulator-icon", ArticulatorElement);
 
 
@@ -3300,39 +3299,39 @@ window.Articulator = {
           name: attributes.name ?? null,
           size: attributes.size ?? "1.5rem",
           theme: attributes.theme ?? "light",
-          weighticon: attributes.weighticon ?? "outline",
+          weighticon: attributes.weighticon ?? "bold",
           ariaLabel: attributes.ariaLabel ?? null
         },
   
         resources: {
           media: {
             iconGallery:
-              "https://example.com/articulator/icons",
+              "https://articulatoricons.netlify.app/",
             designPreviews:
-              "https://example.com/articulator/media"
+              "https://articulatoricons.netlify.app/"
           },
   
           documentation: {
             usageGuide:
-              "https://example.com/docs/articulator-icon",
+              "https://articulatoricons.netlify.app/",
             apiReference:
-              "https://example.com/docs/articulator-icon/api"
+              "https://articulatoricons.netlify.app/"
           },
   
           licensing: {
             iconLibrary:
-              "https://example.com/licenses/articulator-icons",
+             "https://articulatoricons.netlify.app/",
             componentCode:
-              "https://opensource.org/licenses/MIT"
+              "https://articulatoricons.netlify.app/"
           },
   
           policies: {
             accessibility:
-              "https://www.w3.org/WAI/WCAG21/Understanding/",
+            "https://articulatoricons.netlify.app/",
             privacy:
-              "https://example.com/policies/privacy",
+              "https://articulatoricons.netlify.app/",
             security:
-              "https://example.com/policies/security"
+              "https://articulatoricons.netlify.app/"
           }
         }
       };
@@ -3353,12 +3352,13 @@ window.Articulator = {
   // Global helper for feedback
 window.ArticulatorFeedback = {
     send: (msg) => {
-      console.log("Articulator Feedback sent:", msg);
-      // Example: send to your API
-      fetch('/api/feedback', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ msg })
-      });
+      // console.log("Articulator Feedback sent:", msg);
+      // // Example: send to your API
+      // fetch('/api/feedback', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ msg })
+      // });
     }
   };
+  
