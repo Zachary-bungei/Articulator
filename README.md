@@ -3,7 +3,7 @@
 **Articulator** is a lightweight, resolution-independent SVG icon renderer for the web.  
 It uses percentage-based geometry to ensure your icons look sharp at any size or display density.
 
-![Example](https://..)
+![Example]([https://..](https://articulatoricons.netlify.app))
 
 ---
 
@@ -54,9 +54,9 @@ Render an icon using the `<articulator-icon>` custom element:
 
 ```html
 <articulator-icon
-    name="user"
+    name="shield"
     IconWeight="bold"
-    size="2rem"
+    size="3rem"
     color="green"
     class="Articulator-Icons">
 </articulator-icon>
