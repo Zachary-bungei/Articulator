@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="
+        width=device-width,
+        initial-scale=1.0,
+        minimum-scale=1.0,
+        maximum-scale=1.0
+      ">
+    <title>Articulator | The Geometry of Style</title>
+    <link rel="icon" type="image/png" href="logo11.png">
+    <meta name="description" content="Articulator-Icons: a personalized, lightweight website offering icons in an easy, visually appealing way, featuring a falcon theme.">
+
+    <!-- Author -->
+    <meta name="author" content="Zacharia Bungei">
+
+    <!-- Keywords for search engines -->
+    <meta name="keywords" content="icon">
+    <link rel="preload" as="image" href="logo11.png">
+    <style>
+        :root {
+            /* Tints and Shades Palette */
+            --base-black: #020205;
+            --glass-core: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            
+            /* The Crimson Spectrum (Shades & Tints) */
+            --crimson-vivid: #e6194b; 
+            --crimson-soft: #ff4d7a;
+            --crimson-deep: #3d0010;
+            --crimson-glow: rgba(230, 25, 75, 0.4);
+
+            /* The Cobalt Spectrum (Shades & Tints) */
+            --cobalt-vivid: #0070f3;
+            --cobalt-soft: #4dabff;
+            --cobalt-deep: #001a3d;
+            --cobalt-glow: rgba(0, 112, 243, 0.4);
+
+            --text-main: #fcfcfc;
+            --text-muted: #888899;
+        }
+
+        [data-theme="light"] {
+            --base-black: #0b0c0e;
+            --glass-core: rgba(0, 0, 0, 0.04);
+            --glass-border: rgba(0, 0, 0, 0.1);
+            --text-main: #121217;
+            --text-muted: #555566;
+            --crimson-deep: #ffccd5;
+            --cobalt-deep: #cce5ff;
+        }
+
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Outfit', 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--base-black);
+            color: var(--text-main);
+            overflow-x: hidden;
+            transition: background 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Mysterious Depth Layers */
+        .blur-orb {
+            position: fixed;
+            width: 45vw; height: 45vw;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: -1;
+            opacity: 0.25;
+            pointer-events: none;
+        }
+        .orb-1 { background: var(--crimson-vivid); top: -15%; left: -10%; }
+        .orb-2 { background: var(--cobalt-vivid); bottom: -15%; right: -10%; }
+
+        /* Commercial Glass Nav */
+        nav {
+            position: fixed; top: 4px; left: 5%; width: 90%;
+            border-radius: 90px;
+            padding: 1.5rem 10%;
+            background: rgba(var(--base-black), 0.7);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000;
+        }
+
+        .brand {
+            font-size: 1.6rem; font-weight: 900; letter-spacing: -1px;
+            background: linear-gradient(to right, var(--crimson-soft), var(--cobalt-soft));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        .nav-actions { display: flex; align-items: center; gap: 30px; }
+        .nav-actions a { color: var(--text-main); text-decoration: none; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; transition: 0.3s; }
+        .nav-actions a:hover { opacity: 1; color: var(--crimson-soft); }
+
+        #theme-btn {
+            background: var(--glass-core); border: 1px solid var(--glass-border);
+            color: var(--text-main); padding: 8px 16px; border-radius: 30px;
+            cursor: pointer; font-size: 0.7rem; font-weight: bold;
+        }
+
+        /* Hero Section */
+        header {
+            min-height: 100vh;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            text-align: center; padding: 0 15%;
+        }
+
+        .badge {
+            padding: 8px 20px; border-radius: 100px;
+            background: var(--crimson-deep); color: var(--crimson-soft);
+            font-size: 0.75rem; font-weight: 800; letter-spacing: 2px;
+            border: 1px solid var(--crimson-glow); margin-bottom: 2rem;
+        }
+
+        h1 { font-size: clamp(3rem, 10vw, 5.5rem); line-height: 1; margin-bottom: 1.5rem; }
+        .slogan { font-size: 1.5rem; color: var(--text-muted); font-weight: 300; margin-bottom: 3rem; }
+
+        /* Icon Gallery */
+        .section-header { text-align: center; margin-bottom: 4rem; padding: 0 10%; }
+        /* .grid-layout {
+            display: grid; padding: 0 10% 100px;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 25px;
+        } */
+        .grid-layout {
+            display: flex;
+            width: 100%;                   
+        }
+        .fragment{
+          display: grid;
+          padding: 2rem 5% 4rem;      
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+          gap: 2rem;                   
+          justify-items: center;      
+          align-items: start;   
+          width: 100%;       
+        }
+
+        .icon-tile {
+            background: var(--glass-core);
+            border: 1px solid var(--glass-border);
+            border-radius: 28px; padding: 45px 20px;
+            display: flex; flex-direction: column; align-items: center;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer; 
+            position: relative;
+            width: 150px;
+            margin: 15px;
+        }
+
+        .icon-tile:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: var(--cobalt-soft);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        }
+
+        .icon-tile span { margin-top: 15px; font-family: monospace; font-size: 0.8rem; opacity: 0.5; }
+
+        /* The Commercial "Details" Section */
+        .details-strip {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 50px; padding: 100px 10%; background: var(--glass-core);
+            margin: 100px 0; border-top: 1px solid var(--glass-border);
+        }
+
+        .detail-card h3 { color: var(--crimson-soft); margin-bottom: 15px; }
+        .detail-card p { line-height: 1.7; color: var(--text-muted); }
+
+        /* Modal / Popup */
+        #modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(12px);
+            display: none; z-index: 2000;
+        }
+
+        #icon-modal {
+            position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 90%; max-width: 550px;
+            background: var(--base-black); border: 1px solid var(--glass-border);
+            padding: 3rem; border-radius: 40px; z-index: 2001;
+            display: none; text-align: center;
+            box-shadow: 0 0 100px var(--cobalt-glow);
+        }
+
+        .code-box {
+            background: #000; color: var(--cobalt-soft);
+            padding: 20px; border-radius: 15px;
+            font-family: 'Courier New', monospace; font-size: 0.85rem;
+            margin: 25px 0; border: 1px solid #222;
+            text-align: left; overflow-x: auto;
+        }
+
+        .btn-close {
+            background: linear-gradient(to right, var(--crimson-vivid), var(--crimson-soft));
+            color: white; border: none; padding: 12px 40px; border-radius: 50px;
+            font-weight: 800; cursor: pointer; transition: 0.3s;
+        }
+        .btn-close:hover { transform: scale(1.05); }
+
+    </style>
+</head>
+<body>
+
+    <div class="blur-orb orb-1"></div>
+    <div class="blur-orb orb-2"></div>
+
+    <nav>
+      <img src="logo11.png" alt="" width="45px" height="70px">
+        <div class="brand">ARTICULATOR</div>
+        <div class="nav-actions">
+            <a href="#gallery">Library</a>
+            <a href="#manifesto">Manifesto</a>
+            <button id="theme-btn">TOGGLE SHADE</button>
+        </div>
+    </nav>
+
+    <header>
+        <div class="badge">V1.0 INITIALIZED</div>
+        <h1>Articulate The <br><span style="color: var(--cobalt-soft);">Future.</span></h1>
+        <p class="slogan">Your Style. Your Icons. No Barriers.</p>
+        <p style="max-width: 650px; opacity: 0.6; line-height: 2;">
+            Articulator is a mysterious shift in the web-asset paradigm. We replace heavy libraries with 
+            light-speed instructions. Experience a commercial-grade icon engine designed for the rebels, 
+            the creators, and the developers who demand absolute creative sovereignty.
+        </p>
+    </header>
+
+    <div id="gallery" class="section-header">
+        <h2 style="font-size: 3rem;">The Icon Arsenal</h2>
+        <p style="color: var(--text-muted);">Harness the mathematical beauty of geometry. Click any artifact to manifest its source code.</p>
+    </div>
+
+    <div class="grid-layout" id="icon-loop">
+        </div>
+
+    <section id="manifesto" class="details-strip">
+        <div class="detail-card">
+            <h3>Mysterious Efficiency</h3>
+            <p>Why carry the weight of a thousand SVGs? Articulator streams geometry through a single script, injecting energy directly into your DOM with zero asset latency.</p>
+        </div>
+        <div class="detail-card">
+            <h3>Creative Uniqueness</h3>
+            <p>Our custom tags are not just markers; they are containers for expression. Control weight, color tints, and scale with a syntax that feels like natural language.</p>
+        </div>
+        <div class="detail-card">
+          <h3>
+            demo.
+          </h3>
+          <p>
+            
+          # Get via jsDelivr CDN:
+<br> <br>
+            https://cdn.jsdelivr.net/gh/Zachary-bungei/Articulator@main/Articulator.js
+<br>
+<br>
+            ## Installation
+<br>
+            articulator-icon
+                name="user"
+                IconWeight="bold"
+                size="2rem"
+                color="green"
+                class="Articulator-Icons">
+            /articulator-icon
+
+
+          </p>
+        </div>
+    </section>
+
+    <div id="modal-overlay">
+        
+    </div>
+    <div id="icon-modal">
+        <h2 style="margin-bottom: 10px;">Artifact Encoded</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Integrate this logic into your interface to manifest the icon.</p>
+        <div class="code-box" id="modal-snippet"></div>
+        <button class="btn-close" onclick="closeModal()">CLOSE PORTAL</button>
+    </div>
+    <script src="/./main.js"></script>
+    <script>
+      const fragment = document.createElement("div");
+      let grid = document.getElementById("icon-loop");
+      ArticulatorAPI.keys.forEach(iconName => {
+          const tile = document.createElement("div");
+          tile.className = "icon-tile";
+          tile.dataset.icon = iconName;
+          tile.innerHTML = `
+              <articulator-icon 
+                  name="${iconName}"
+                  IconWeight="bold"
+                  size="4rem"
+                  color="green"
+                  class="Articulator-Icons">
+              </articulator-icon>
+              <span>${iconName.toUpperCase()}</span>
+          `;
+
+          tile.onclick = () => openModal(iconName);
+          fragment.appendChild(tile);
+          fragment.className = "fragment";
+      });
+      grid.appendChild(fragment);
+
+      const snippet = document.getElementById("modal-snippet");
+      const overlay = document.getElementById("modal-overlay");
+      const modal = document.getElementById("icon-modal");
+        function openModal(name) {
+            const tag = ` <articulator-icon\n  name="${name}"\n  IconWeight="bold"\n  size="2rem"\n  color="green"\n  class="Articulator-Icons">\n</articulator-icon>`;
+            snippet.innerText = tag;
+            overlay.style.display = 'block';
+            modal.style.display = 'block';
+            modal.apended()
+        }
+
+        function closeModal() {
+            overlay.style.display = 'none';
+            modal.style.display = 'none';
+        }
+
+        // Theme Toggle Logic
+        document.getElementById('theme-btn').onclick = () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            document.documentElement.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+        };
+
+        // Smooth Scroll Anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
