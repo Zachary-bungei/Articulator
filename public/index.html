@@ -314,18 +314,18 @@
 
       const snippet = document.getElementById("modal-snippet");
       const overlay = document.getElementById("modal-overlay");
-      // const modal = document.getElementById("icon-modal");
+      const modal = document.getElementById("icon-modal");
         function openModal(name) {
             const tag = ` <articulator-icon\n  name="${name}"\n  IconWeight="bold"\n  size="2rem"\n  color="green"\n  class="Articulator-Icons">\n</articulator-icon>`;
             snippet.innerText = tag;
             overlay.style.display = 'block';
-            // modal.style.display = 'block';
+            modal.style.display = 'block';
             // modal.apended()
         }
 
         function closeModal() {
             overlay.style.display = 'none';
-            // modal.style.display = 'none';
+            modal.style.display = 'none';
         }
 
         // Theme Toggle Logic
